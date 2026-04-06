@@ -10,6 +10,7 @@ const Register = lazy(() => import('./pages/Register'))
 const Home = lazy(() => import('./pages/Home'))
 const Feed = lazy(() => import('./pages/Feed'))
 const Library = lazy(() => import('./pages/Library'))
+const Knowledge = lazy(() => import('./pages/Knowledge'))
 const Studio = lazy(() => import('./pages/Studio'))
 const Settings = lazy(() => import('./pages/Settings'))
 
@@ -55,6 +56,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/feed" element={<Feed />} />
             <Route path="/library" element={<Library />} />
+            <Route path="/knowledge" element={<Knowledge />} />
             <Route path="/studio" element={<Studio />} />
             <Route path="/settings" element={<Settings />} />
           </Route>

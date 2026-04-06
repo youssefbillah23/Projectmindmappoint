@@ -92,6 +92,7 @@ model SavedItem {
   user             User              @relation(fields: [userId], references: [id], onDelete: Cascade)
   userInteractions UserInteraction[]
   libraryItems     LibraryItem[]
+  embedding        ContentEmbedding?
 
   @@unique([userId, externalId])
   @@map("saved_items")
@@ -173,6 +174,20 @@ model LibraryItem {
   savedItem SavedItem?     @relation(fields: [savedItemId], references: [id], onDelete: SetNull)
 
   @@map("library_items")
+}
+
+model ContentEmbedding {
+  id          String   @id @default(uuid()) @db.Uuid
+  savedItemId String   @db.Uuid
+  userId      String   @db.Uuid
+  embedding   Float[]
+  contentHash String
+  createdAt   DateTime @default(now())
+
+  savedItem SavedItem @relation(fields: [savedItemId], references: [id], onDelete: Cascade)
+
+  @@unique([savedItemId])
+  @@map("content_embeddings")
 }
 
 model GeneratedPost {

@@ -18,6 +18,7 @@ import libraryRouter from './routes/library';
 import postsRouter from './routes/posts';
 import feedRouter from './routes/feed';
 import interactionsRouter from './routes/interactions';
+import knowledgeRouter from './routes/knowledge';
 
 const app = express();
 
@@ -59,6 +60,7 @@ app.use('/api/library', libraryRouter);
 app.use('/api/posts', postsRouter);
 app.use('/api/feed', feedRouter);
 app.use('/api/interactions', interactionsRouter);
+app.use('/api/knowledge', knowledgeRouter);
 
 // Health check
 app.get('/api/health', (_req, res) => {

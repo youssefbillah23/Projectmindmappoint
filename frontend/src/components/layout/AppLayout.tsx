@@ -3,6 +3,7 @@ import {
   Home,
   Rss,
   BookMarked,
+  Brain,
   PenSquare,
   Settings,
 } from 'lucide-react'
@@ -12,6 +13,7 @@ const navItems = [
   { to: '/', icon: Home, label: 'Home' },
   { to: '/feed', icon: Rss, label: 'Feed' },
   { to: '/library', icon: BookMarked, label: 'Library' },
+  { to: '/knowledge', icon: Brain, label: 'Ask AI' },
   { to: '/studio', icon: PenSquare, label: 'Studio' },
   { to: '/settings', icon: Settings, label: 'Settings' },
 ]
