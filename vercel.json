@@ -1,0 +1,7 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "cd elnura && npm install",
+  "buildCommand": "cd elnura && npm run build",
+  "outputDirectory": "elnura/dist"
+}
